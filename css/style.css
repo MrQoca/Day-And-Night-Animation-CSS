@@ -1,0 +1,320 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    animation: back 30s infinite;
+    animation-direction: normal;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes back {
+    0% {
+        background: rgb(63, 79, 85);
+    }
+
+    33% {
+        background: lightblue;
+    }
+
+    66% {
+        background: black;
+    }
+
+    100% {
+        background: rgb(63, 79, 85);
+    }
+
+}
+.star{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    animation: star 30s infinite;
+}
+#star1{
+    top: 80px;
+    right: -50px;
+}
+#star2{
+    top: 0px;
+    right: -70px;
+}
+#star3{
+    top: -50px;
+    right: -150px;
+}
+#star4{
+    top: -30px;
+    right: -250px;
+}
+#star5{
+    top: -10px;
+    right: -350px;
+}
+#star6{
+    top: 0px;
+    right: -450px;
+}
+#star7{
+    top: 60px;
+    right: -550px;
+}
+#star8{
+    top: 60px;
+    right: -50px;
+}
+#star9{
+    top: 40px;
+    right: -300px;
+}
+#star10{
+    top: -30px;
+    right: -450px;
+}
+#star11{
+    top: -30px;
+    right: -270px;
+}
+@keyframes star {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    66% {
+        width: 20px;
+        height: 20px;
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0.2;
+        width: 20px;
+        height: 20px;
+    }
+
+}
+.city {
+    width: 805px;
+    height: 100%;
+    background-image: url("../asserts/city.png");
+    position: relative;
+    background-repeat: no-repeat;
+    animation: day_night 30s linear infinite;
+    top: 300px;
+}
+
+@keyframes day_night {
+    0% {
+        filter: grayscale(50%);
+    }
+
+    33% {
+        filter: grayscale(100%);
+    }
+    66% {
+        filter: grayscale(50%);
+    }
+    100% {
+        filter: grayscale(0%);
+    }
+}
+
+.sun {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: sun 30s linear infinite;
+}
+
+@keyframes sun {
+    0% {
+        transform: rotate(0deg) translate(-460px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-460px) rotate(360deg);
+    }
+}
+
+.moon {
+    width: 130px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: moon 30s linear infinite;
+}
+
+@keyframes moon {
+    0% {
+        transform: rotate(180deg) translate(-460px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(540deg) translate(-460px) rotate(360deg);
+    }
+}
+
+.cloud1 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    animation: cloud1 30s linear infinite;
+    animation-direction: alternate-reverse;
+}
+
+.cloud2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -30px;
+    right: 0px;
+    animation: cloud2 30s linear infinite;
+    animation-direction: alternate-reverse;
+}
+
+.cloud3 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    animation: cloud3 30s linear infinite;
+    animation-direction: alternate-reverse;
+}
+
+.cloud4 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 80px;
+    right: -50px;
+    animation: cloud4 30s linear infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes cloud1 {
+    0% {
+        top: -50px;
+        left: 0;
+    }
+
+    33% {
+        top: -50px;
+        left: 200px;
+    }
+    66% {
+        top: -50px;
+        left: 400px;
+    }
+    100% {
+        top: -50px;
+        left: 600px;
+    }
+}
+@keyframes cloud2 {
+    0% {
+        top: -50px;
+        right: 0;
+    }
+
+    33% {
+        top: -50px;
+        right: 200px;
+    }
+    66% {
+        top: -50px;
+        right: 400px;
+    }
+    100% {
+        top: -50px;
+        right: 600px;
+    }
+}
+@keyframes cloud3 {
+    0% {
+        top: 50px;
+        left: 0;
+    }
+
+    50% {
+        top: 50px;
+        left: 250px;
+  
+    }
+    100% {
+        top: 50px;
+        left: 500px;
+    }
+}
+@keyframes cloud4 {
+    0% {
+        top: 80px;
+        right: 0;
+    }
+
+    50% {
+        top: 80px;
+        right: 250px;
+  
+    }
+    100% {
+        top: 80px;
+        right: 500px;
+    }
+}
+
+
+.batman {
+    width: 80px;
+    height: 443px;
+    transform: rotate(-30deg);
+    position: absolute;
+    top: -50px;
+    left: 500px;
+    animation: batman 30s linear infinite;
+    animation-direction: normal;
+}
+@keyframes batman {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
